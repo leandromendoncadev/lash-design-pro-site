@@ -1333,12 +1333,101 @@ a {
 }
 
 /* =========================================================
+   Segurança / Proteção Jurídica
+   ========================================================= */
+
+.safety {
+  background: linear-gradient(180deg, #ffffff 0%, #fff5f9 60%, #ffffff 100%);
+}
+
+.safety-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.safety-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 28px 24px 26px;
+  border: 1px solid rgba(232, 74, 123, 0.08);
+  box-shadow: 0 10px 30px rgba(232, 74, 123, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.safety-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(232, 74, 123, 0.25);
+  box-shadow: 0 18px 40px rgba(232, 74, 123, 0.12);
+}
+
+.safety-card-featured {
+  border: 2px solid var(--primary);
+  box-shadow: 0 14px 36px rgba(232, 74, 123, 0.18);
+  background: linear-gradient(180deg, #ffffff 0%, #fff0f5 100%);
+}
+
+.safety-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--soft);
+  color: var(--primary);
+  font-size: 1.625rem;
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+}
+
+.safety-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  color: var(--dark);
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.safety-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.safety-cta {
+  margin-top: 48px;
+  padding: 32px 28px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #120a1f 0%, #241438 100%);
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(18, 10, 31, 0.25);
+}
+
+.safety-cta p {
+  color: #fdf7fb;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin: 0 0 22px 0;
+}
+
+.safety-cta p strong {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.safety-cta .btn {
+  margin: 0 auto;
+}
+
+/* =========================================================
    Responsivo · < 1024px
    ========================================================= */
 
 @media (max-width: 1024px) {
   .features-grid,
-  .pricing-grid {
+  .pricing-grid,
+  .safety-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1439,12 +1528,25 @@ a {
   }
 
   .features-grid,
-  .pricing-grid {
+  .pricing-grid,
+  .safety-grid {
     grid-template-columns: 1fr;
   }
 
   .plan-featured {
     transform: translateY(0);
+  }
+
+  .safety-cta {
+    padding: 28px 22px;
+  }
+
+  .safety-cta p {
+    font-size: 1rem;
+  }
+
+  .safety-cta .btn {
+    width: 100%;
   }
 
   .why-photo {

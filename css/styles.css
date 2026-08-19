@@ -723,14 +723,19 @@ a {
 
 @media (max-width: 768px) {
   .carousel-btn {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     font-size: 1.375rem;
+    z-index: 3;
   }
-  .carousel-prev { left: -2px; }
-  .carousel-next { right: -2px; }
-  .carousel-viewport { padding: 10px 2px 22px; }
+  .carousel-prev { left: 8px; }
+  .carousel-next { right: 8px; }
+  .carousel-viewport { padding: 12px 20px 22px; }
   .carousel-track { gap: 18px; }
+  .carousel-slide {
+    width: min(320px, 88vw);
+    margin: 0 auto;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1561,11 +1566,63 @@ a {
 
   .hero-cta {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    gap: 16px;
   }
 
   .hero-cta .btn {
     width: 100%;
+    max-width: 360px;
+  }
+
+  .hero-cta .play-badge-link {
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .hero-cta .play-badge {
+    width: 100% !important;
+    max-width: 360px !important;
+  }
+
+  /* ========== CORREÇÕES DE LARGURA NO MOBILE ========== */
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .hero-grid {
+    padding: 0 4px;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  .hero-content h1,
+  .hero-content .subtitle,
+  .section-head,
+  .feature-card,
+  .plan-card,
+  .safety-card,
+  .proof-item {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-head {
+    text-align: center;
+    padding: 0 8px;
   }
 
   .hero-proof {
@@ -1612,6 +1669,49 @@ a {
     width: 100%;
   }
 
+  /* Tabela comparativa no mobile: MOSTRA a tabela comprimida 100% width
+     SEM scroll horizontal - colunas com largura % fixa, texto quebrado com wrap */
+  .pricing-table-wrap::after {
+    content: none !important;
+  }
+  .pricing-table {
+    display: block !important;
+    overflow-x: visible !important;
+    padding-bottom: 0 !important;
+  }
+  .pricing-table-row {
+    grid-template-columns: 42% 17% 19% 22%; /* = 100% exato, sem transbordar */
+    min-width: unset !important;           /* Remove o min-width antigo que causava scroll */
+    width: 100%;
+  }
+  .pricing-table-cell {
+    padding: 10px 6px !important;
+    font-size: 0.76rem !important;
+    line-height: 1.25;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    text-align: center;
+  }
+  /* Coluna "Funcionalidade" (1ª coluna) · alinhada à esquerda */
+  .pricing-table-cell.pricing-table-feature {
+    text-align: left;
+    font-weight: 700;
+    padding-left: 8px !important;
+    font-size: 0.78rem !important;
+  }
+  .pricing-table-head .pricing-table-cell {
+    font-size: 0.86rem !important;
+    font-weight: 800;
+    padding: 14px 4px !important;
+  }
+  .pricing-table-head .pricing-table-cell.pricing-table-feature {
+    font-size: 0.78rem !important;
+  }
+
+  /* Esconde os cards pricing-mobile (agora mostramos a tabela comprimida) */
+  .pricing-mobile { display: none !important; }
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -1641,8 +1741,285 @@ a {
 }
 
 /* =========================================================
-   Páginas legais (Privacidade / Termos)
+   PREÇOS PROMOCIONAIS · DE/POR (cards de planos desktop)
    ========================================================= */
+
+.price-old {
+  display: inline-block;
+  color: #9CA3AF;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: #9CA3AF;
+  margin-bottom: 4px;
+  font-family: Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.price-label,
+.price-label-sm {
+  display: inline-block;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-right: 6px;
+  vertical-align: middle;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.price-new {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+  color: var(--primary);
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1;
+  font-family: Inter, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  vertical-align: middle;
+}
+
+.price-new small {
+  font-size: 0.95rem;
+  color: var(--subtext);
+  font-weight: 600;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.price-new-sm {
+  font-size: 1.85rem;
+}
+.price-old-sm {
+  font-size: 0.9rem;
+}
+.price-label-sm {
+  font-size: 0.9rem;
+  margin-right: 4px;
+}
+
+.plan-price {
+  line-height: 1.3;
+  padding: 4px 0 8px;
+}
+
+.plan-price-promo br { display: none; }
+
+/* Mobile · tamanhos e alinhamento */
+@media (max-width: 768px) {
+  .price-old {
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+  }
+  .price-new {
+    font-size: 2.1rem;
+  }
+  .price-new-sm {
+    font-size: 1.8rem;
+  }
+  .price-label {
+    font-size: 0.95rem;
+    margin-right: 4px;
+  }
+  .price-label-sm {
+    font-size: 0.85rem;
+  }
+}
+
+/* Cards de preços mobile (pricing-mobile) · ocultos no momento,
+   mas mantidos com preços corretos para reativação futura */
+.plan-mobile-promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  margin: 4px 0 4px;
+}
+.plan-mobile-promo .price-old {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+}
+.plan-mobile-new {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 3px;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: Inter, system-ui, sans-serif;
+}
+.plan-mobile-new strong {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 1.85rem;
+  letter-spacing: -0.02em;
+}
+.plan-mobile-new-big strong {
+  font-size: 2rem;
+}
+.plan-mobile-new small {
+  font-size: 0.85rem;
+  color: var(--subtext);
+  font-weight: 600;
+}
+
+/* =========================================================
+   Tabela Comparativa · Versão MOBILE (3 cards empilhados)
+   - No desktop (≥769px): fica invisível (mostra a tabela original)
+   - No mobile (≤768px):  fica visível (esconde a tabela original)
+   ========================================================= */
+
+.pricing-mobile { display: none; } /* padrão: só liga no mobile */
+
+.plan-mobile {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 24px 20px 22px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.plan-mobile-premium {
+  border-color: rgba(243, 154, 180, 0.45);
+}
+
+.plan-mobile-pro {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFF5F9 100%);
+  border-width: 2px;
+  border-color: var(--primary);
+  box-shadow: 0 20px 40px rgba(232, 74, 123, 0.12);
+}
+
+.plan-mobile-ribbon {
+  position: absolute;
+  top: 16px;
+  right: -48px;
+  transform: rotate(35deg);
+  background: var(--primary);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  padding: 5px 54px;
+  text-transform: uppercase;
+  font-family: Inter, sans-serif;
+  box-shadow: 0 4px 10px rgba(232, 74, 123, 0.25);
+}
+
+.plan-mobile-head {
+  text-align: center;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+.plan-mobile-head h4 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--text);
+  margin: 8px 0 6px 0;
+  font-weight: 800;
+}
+
+.plan-mobile-price {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 4px 0 4px 0;
+  line-height: 1;
+}
+
+.plan-mobile-price small {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--subtext);
+  margin-left: 2px;
+}
+
+.plan-mobile-tag {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: rgba(232, 74, 123, 0.09);
+  color: var(--primary);
+  letter-spacing: 0.01em;
+}
+
+.plan-mobile-list {
+  list-style: none;
+  margin: 0 0 18px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-mobile-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 4px;
+  border-bottom: 1px dashed rgba(15, 23, 42, 0.06);
+  font-size: 0.9rem;
+}
+
+.plan-mobile-list li:last-child {
+  border-bottom: 0;
+}
+
+.plan-mobile-list .lbl {
+  color: var(--text);
+  font-weight: 500;
+  line-height: 1.35;
+  flex: 1;
+  padding-right: 8px;
+}
+
+.plan-mobile-list .ok {
+  color: #059669;
+  font-weight: 800;
+  font-size: 1.05rem;
+  white-space: nowrap;
+}
+
+.plan-mobile-list .no {
+  color: #9CA3AF;
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.plan-mobile-list strong {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.plan-mobile-foot {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.plan-mobile-foot .btn {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+/* ================= LEGAL PAGES ================= */
 
 .legal-hero {
   padding-top: 140px;

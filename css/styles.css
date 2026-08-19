@@ -1080,17 +1080,64 @@ a {
     border-radius: var(--radius-lg);
   }
   .pricing-table-row {
-    grid-template-columns: minmax(180px, 1.2fr) repeat(3, minmax(110px, 1fr));
+    grid-template-columns: minmax(150px, 1.1fr) repeat(3, minmax(95px, 1fr));
+    min-width: 620px;
   }
   .pricing-table-cell {
-    padding: 12px 8px;
-    font-size: 0.875rem;
+    padding: 10px 6px;
+    font-size: 0.78rem;
   }
   .plan-mini {
     height: 36px;
     font-size: 0.8125rem;
     padding: 0 12px;
     margin: 10px auto;
+  }
+
+  /* ========== CORREÇÕES MOBILE · 1 COLUNA ========== */
+  .features-grid,
+  .pricing-grid,
+  .safety-grid,
+  .proof-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  /* Cards de plano no mobile: destacar o PRO sem deslocamento lateral */
+  .plan-card {
+    padding: 26px 20px 24px;
+    border-radius: var(--radius-lg);
+  }
+  .plan-card.plan-featured {
+    transform: none;
+    border-width: 2px;
+    margin: 4px 0 4px 0;
+  }
+  .plan-card.plan-featured:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Badges Play no mobile mais largos para não ficar pequenos */
+  .play-badge-lg { width: min(270px, 82vw); max-width: 280px; }
+  .play-badge-md { width: min(220px, 76vw); max-width: 230px; }
+  .play-badge-sm { width: min(150px, 44vw); max-width: 160px; }
+  .play-badge-xl { width: min(290px, 86vw); max-width: 310px; }
+
+  /* Tabela comparativa no mobile: scroll horizontal com dica visual 👉 */
+  .pricing-table-wrap::after {
+    content: "Arraste para o lado 👉";
+    display: block;
+    margin: 14px 4px 0 4px;
+    text-align: center;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 0.01em;
+  }
+  .pricing-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
   }
 }
 

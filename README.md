@@ -2,8 +2,7 @@
 
 Landing page oficial do app **Lash Designer Pro** (agenda, clientes, anamnese, fichas técnicas,
 histórico de atendimentos, financeiro e planos Free / Premium / Pro) — feito em HTML, CSS e JS
-puros, sem dependências. Publicado em produção via GitHub Pages com domínio próprio
-`lashdesignerpro.app.br` (registrado no Registro.br).
+puros, sem dependências. Publicado em produção via GitHub Pages com domínio personalizado.
 
 > 📱 **App na Google Play:** https://play.google.com/store/apps/details?id=com.lmdev.lashagenda&hl=pt
 
@@ -13,9 +12,8 @@ puros, sem dependências. Publicado em produção via GitHub Pages com domínio 
 
 | Onde | Link |
 |---|---|
-| 🌐 Site online | `https://lashdesignerpro.app.br` (via GitHub Pages) |
+| 🌐 Site online | Publicado via GitHub Pages com domínio personalizado e HTTPS |
 | 📱 App Android | [![Google Play](assets/img/disponivel-google-play.png)](https://play.google.com/store/apps/details?id=com.lmdev.lashagenda&hl=pt) |
-| 📂 Código do app Flutter | Pasta irmã `../lash_flutter/` (mesmo workspace) |
 
 ---
 
@@ -68,18 +66,17 @@ lash-design-pro-site/
 
 ## 👾 Como rodar localmente
 
-O site é **HTML/CSS/JS puro**, não precisa de build. Basta qualquer servidor HTTP local:
+O site é **HTML/CSS/JS puro**, não precisa de build. Basta qualquer servidor HTTP local
+**na raiz da pasta do projeto**:
 
 ### Opção 1 — com Python (se tiver no PC)
-```powershell
-cd E:\APP\flutter_sites\lash_designer_pro_site
+```bash
 python -m http.server 8080
 # abre no navegador: http://127.0.0.1:8080/
 ```
 
 ### Opção 2 — com Node (se tiver `npx` no PATH)
-```powershell
-cd E:\APP\flutter_sites\lash_designer_pro_site
+```bash
 npx --yes http-server -p 8080 -c-1 .
 ```
 
@@ -88,11 +85,11 @@ Clica com botão direito em `index.html` → **"Open with Live Server"**.
 
 ---
 
-## 🚀 Publicação (como está em produção)
+## 🚀 Publicação (GitHub Pages)
 
 ### 1. Primeiro push no GitHub
-```powershell
-cd E:\APP\flutter_sites\lash_designer_pro_site
+Na raiz da pasta do projeto:
+```bash
 git init
 git add -A
 git commit -m "Site do Lash Designer Pro (landing page)"
@@ -100,6 +97,11 @@ git remote add origin https://github.com/SEU-USUARIO/lash-design-pro-site.git
 git branch -M main
 git push -u origin main
 ```
+
+> 💡 **Dica:** se o repositório foi criado com README/.gitignore vazio pelo painel do GitHub
+> e o push for rejeitado por "histórico não relacionado", use:
+> `git merge --allow-unrelated-histories origin/main --no-edit`
+> antes de `git push`.
 
 ### 2. Ligar GitHub Pages
 1. Repositório → **Settings → Pages**
@@ -112,32 +114,21 @@ git push -u origin main
 https://SEU-USUARIO.github.io/lash-design-pro-site/
 ```
 
-### 3. Apontar domínio `lashdesignerpro.app.br` (Registro.br)
-
-Depois que o período de transição do DNS acabar:
-
-1. **Registro.br → Zona DNS do domínio** → adicionar 5 registros:
-
-   | Tipo | Host | Valor |
-   |---|---|---|
-   | A | @ | `185.199.108.153` |
-   | A | @ | `185.199.109.153` |
-   | A | @ | `185.199.110.153` |
-   | A | @ | `185.199.111.153` |
-   | CNAME | `www` | `SEU-USUARIO.github.io.` (⚠️ ponto no final) |
-
-2. **GitHub → Settings → Pages**
-   - **Custom domain:** `lashdesignerpro.app.br` → Save
-   - Aguarda "DNS check successful"
-   - Marca **Enforce HTTPS** (fica verde depois que o Let's Encrypt emite o certificado)
+### 3. (Opcional) Domínio personalizado
+1. No painel do seu registrador de domínios, configure os registros **A** e **CNAME**
+   conforme a [documentação oficial do GitHub Pages](https://docs.github.com/pt/pages/configuring-a-custom-domain-for-your-github-pages-site).
+2. No GitHub → **Settings → Pages**:
+   - **Custom domain:** preencha seu domínio → Save
+   - Aguarde "DNS check successful"
+   - Marque **Enforce HTTPS** (fica verde depois que o certificado é emitido)
 
 ---
 
 ## ✏️ Como atualizar o site depois
 
-1. Edita os arquivos HTML/CSS/JS no PC
+1. Edita os arquivos HTML/CSS/JS
 2. Sobe as mudanças:
-   ```powershell
+   ```bash
    git add -A
    git commit -m "Atualiza notas dos planos / nova screenshot"
    git push
@@ -155,7 +146,7 @@ Depois que o período de transição do DNS acabar:
 | **Google Drive (backup)** | Escopos de "App Data folder" e arquivos de backup documentados em privacidade.html. |
 | **Anúncios (Free)** | Menção a fins de publicidade/medição anônima no Free. |
 | **Planos / Teste 7 dias** | Free 20 clientes · Premium 40 (7 dias grátis) · Pro ∞ (7 dias grátis) — coerentes com o app Flutter. |
-| **Domínio `.app.br`** | HTTPS obrigatório (GitHub Pages + Enforce HTTPS atende 100%). |
+| **HTTPS obrigatório** | GitHub Pages + Enforce HTTPS atende domínios com essa exigência. |
 
 ---
 

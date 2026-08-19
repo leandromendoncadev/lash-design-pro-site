@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#E84A7B" />
+
+  <title>Lash Designer Pro — Gestão Completa para Seu Estúdio</title>
+  <meta
+    name="description"
+    content="Solução profissional para Lash Designers com gestão de agenda, clientes, histórico de atendimentos, financeiro e backup em nuvem. Teste grátis por 7 dias."
+  />
+  <meta
+    name="keywords"
+    content="Lash Designer, agenda de lash, aplicativo para lash designer, gestão de estúdio, ficha técnica de cílios, anamnese de lash"
+  />
+  <meta name="author" content="Leandro Mendonça DEV" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Lash Designer Pro — Gestão Completa para Seu Estúdio" />
+  <meta
+    property="og:description"
+    content="Agenda, clientes, histórico de atendimentos, financeiro e backup em nuvem. Tudo na palma da mão."
+  />
+  <meta property="og:image" content="assets/img/hero-mockup.png" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#top" class="brand" aria-label="Lash Designer Pro home">
+        <img src="assets/img/logo.png" alt="Logo Lash Designer Pro" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-title">Lash Designer</span>
+          <span class="brand-sub">PRO</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Menu principal">
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#screenshots">Como funciona</a>
+        <a href="#por-que-usar">Por que usar</a>
+        <a href="#planos">Planos</a>
+        <a href="#faq">Dúvidas</a>
+      </nav>
+
+      <a
+        class="play-badge-link nav-cta-badge"
+        href="https://play.google.com/store/apps/details?id=com.lmdev.lashagenda&hl=pt"
+        target="_blank"
+        rel="noopener"
+        aria-label="Baixar na Google Play"
+      >
+        <img
+          class="play-badge play-badge-sm"
+          src="assets/img/disponivel-google-play.png"
+          alt="Baixar na Google Play"
+          width="170"
+          height="52"
+        />
+      </a>
+
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        aria-label="Abrir menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="badge">
+            <span class="badge-dot"></span>
+            Aprovado na Google Play · +100% compatível com Android
+          </span>
+          <h1 class="hero-title">
+            Gestão completa para seu estúdio:
+            <span class="accent">Agenda, Clientes e Finanças</span>
+            na palma da mão.
+          </h1>
+          <p class="hero-sub">
+            Gerencie atendimentos, fichas técnicas, anamnese e o financeiro do
+            seu negócio com o app feito para Lash Designers profissionais.
+            Teste grátis por 7 dias.
+          </p>
+          <div class="hero-cta">
+            <a
+              class="play-badge-link"
+              href="https://play.google.com/store/apps/details?id=com.lmdev.lashagenda&hl=pt"
+              target="_blank"
+              rel="noopener"
+              aria-label="Baixar Lash Designer Pro na Google Play"
+            >
+              <img
+                class="play-badge play-badge-lg"
+                src="assets/img/disponivel-google-play.png"
+                alt="Disponível no Google Play"
+                width="240"
+                height="72"
+              />
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#funcionalidades">
+              Ver funcionalidades
+            </a>
+          </div>
+          <ul class="hero-proof">
+            <li>
+              <strong>7 dias</strong> grátis de Pro
+            </li>
+            <li>
+              Sem fidelidade · Cancele quando quiser
+            </li>
+            <li>
+              Backup automático no Google Drive
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <img
+            src="assets/img/hero-mockup.png"
+            alt="Tela inicial do Lash Designer Pro mostrando os cards de Agenda, Clientes e Finanças"
+            class="hero-mockup"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- PROOF STRIP -->
+    <section class="proof-strip" aria-label="Prova social e aprovação">
+      <div class="container proof-grid">
+        <div class="proof-item">
+          <img
+            src="assets/img/badge-play-aprovado.png"
+            alt="Aplicativo aprovado na Google Play"
+            class="proof-badge"
+          />
+          <div>
+            <p class="proof-label">100% seguro</p>
+            <p class="proof-value">Publicado e verificado pela Google</p>
+          </div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-stars" aria-hidden="true">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <div>
+            <p class="proof-label">Avaliações de clientes reais</p>
+            <p class="proof-value">Fácil e intuitivo — direto ao ponto</p>
+          </div>
+        </div>
+        <div class="proof-item">
+          <p class="proof-chip">⚡ Instalação leve</p>
+          <div>
+            <p class="proof-label">Aplicativo leve e rápido</p>
+            <p class="proof-value">Ocupa pouco espaço no seu celular</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features section" id="funcionalidades">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Funcionalidades</span>
+          <h2>Tudo o que você precisa em um único app</h2>
+          <p>
+            Do agendamento ao fechamento do mês, o Lash Designer Pro organiza
+            seu fluxo para você focar 100% no que importa: o atendimento.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon icon-pink">📅</div>
+            <h3>Agenda inteligente</h3>
+            <p>
+              Agenda de horários com visão semanal, busca rápida e avisos de
+              conflito. Nunca mais perca um furo na agenda.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon icon-pink">👩🏻‍🦰</div>
+            <h3>Cadastro completo de clientes</h3>
+            <p>
+              Telefone, rede social, foto e anotações pessoais — tudo organizado
+              com busca por nome, telefone ou letras.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon icon-pink">🩺</div>
+            <h3>Anamnese digital</h3>
+            <p>
+              Registre todos os dados de saúde da cliente, alergias e
+              observações antes de qualquer procedimento.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon icon-pink">📋</div>
+            <h3>Ficha técnica detalhada</h3>
+            <p>
+              Modelo, espessura, curvatura, mapping, foto antes/depois — tudo
+              salvo no perfil da cliente para consulta rápida.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon icon-pink">📜</div>
+            <h3>Histórico de atendimentos</h3>
+            <p>
+              Acompanhe todo o histórico por cliente ou por período, com filtros
+              semanais e ampliacão de época com 1 clique.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon icon-pink">💸</div>
+            <h3>Gestão financeira</h3>
+            <p>
+              Controle de receitas, despesas mensais, formas de pagamento e
+              relatórios de faturamento consolidados.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon icon-pink">💾</div>
+            <h3>Backup em nuvem (Google Drive)</h3>
+            <p>
+              Salve e restaure seu banco de dados direto no Drive do seu Google,
+              automático ou manual. Nunca perca dados.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon icon-pink">✉️</div>
+            <h3>Envio de mensagens e emails</h3>
+            <p>
+              Modelos prontos de WhatsApp e email para aniversariantes,
+              lembretes e confirmações — com 1 toque.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon icon-pink">📸</div>
+            <h3>Fotos antes e depois</h3>
+            <p>
+              Registre o resultado de cada procedimento com fotos organizadas
+              no histórico da cliente — sempre à mão para consultas.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon icon-pink">📱</div>
+            <h3>Relatórios do seu negócio</h3>
+            <p>
+              Veja o seu faturamento consolidado, formas de pagamento mais
+              usadas e comparação mensal sem precisar de planilhas.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREENSHOTS -->
+    <section class="screenshots section section-soft" id="screenshots">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Como funciona na prática</span>
+          <h2>Um app moderno, bonito e fácil de usar</h2>
+          <p>Interface pensada para o dia a dia corrido do seu estúdio.</p>
+        </div>
+
+        <div class="carousel" id="screenshots-carousel" aria-roledescription="carousel" aria-label="Screenshots do app">
+          <button class="carousel-btn carousel-prev" type="button" aria-label="Screenshot anterior">‹</button>
+          <button class="carousel-btn carousel-next" type="button" aria-label="Próxima screenshot">›</button>
+
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="carousel-track">
+              <figure class="screenshot-item carousel-slide" aria-roledescription="slide" aria-label="1 de 8 — Tela inicial do app">
+                <img src="assets/img/play/screen1-home.png" alt="Tela inicial do app" loading="lazy" />
+              </figure>
+              <figure class="screenshot-item carousel-slide" aria-roledescription="slide" aria-label="2 de 8 — Agenda semanal do Lash Designer Pro">
+                <img src="assets/img/play/screen5-agenda.png" alt="Agenda semanal do Lash Designer Pro" loading="lazy" />
+              </figure>
+              <figure class="screenshot-item carousel-slide" aria-roledescription="slide" aria-label="3 de 8 — Novo agendamento em segundos">
+                <img src="assets/img/play/screen8-novo-agendamento.png" alt="Novo agendamento em segundos" loading="lazy" />
+              </figure>
+              <figure class="screenshot-item carousel-slide" aria-roledescription="slide" aria-label="4 de 8 — Gerenciamento de clientes">
+                <img src="assets/img/play/screen2.png" alt="Gerenciamento de clientes" loading="lazy" />
+              </figure>
+              <figure class="screenshot-item carousel-slide" aria-roledescription="slide" aria-label="5 de 8 — Tela de histórico e detalhes">
+                <img src="assets/img/play/screen3.png" alt="Tela de histórico e detalhes" loading="lazy" />
+              </figure>
+              <figure class="screenshot-item carousel-slide" aria-roledescription="slide" aria-label="6 de 8 — Tela de financeiro ou serviços">
+                <img src="assets/img/play/screen4.png" alt="Tela de financeiro ou serviços" loading="lazy" />
+              </figure>
+              <figure class="screenshot-item carousel-slide" aria-roledescription="slide" aria-label="7 de 8 — Tela de backup ou configurações">
+                <img src="assets/img/play/screen6.png" alt="Tela de backup ou configurações" loading="lazy" />
+              </figure>
+              <figure class="screenshot-item carousel-slide" aria-roledescription="slide" aria-label="8 de 8 — Tela de planos e assinatura">
+                <img src="assets/img/play/screen7.png" alt="Tela de planos e assinatura" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+
+          <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Escolher screenshot"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUE USAR (LIFESTYLE) -->
+    <section class="why section" id="por-que-usar">
+      <div class="container why-grid">
+        <div class="why-media">
+          <img
+            src="assets/img/lifestyle.jpeg"
+            alt="Lash Designer utilizando o app no tablet dentro do estúdio"
+            class="why-photo"
+            loading="lazy"
+          />
+        </div>
+        <div class="why-copy">
+          <span class="eyebrow">Por que usar o Lash Designer Pro</span>
+          <h2>Feito por quem entende a rotina do estúdio</h2>
+          <p>
+            Criado pensando em cada etapa do seu trabalho: do cadastro da
+            cliente à manutenção, passando por anamnese, fichas técnicas e
+            histórico — tudo em um só lugar, sem planilhas perdidas ou papéis.
+          </p>
+
+          <ul class="why-list">
+            <li>
+              <span class="check">✓</span>
+              <div>
+                <strong>Nada de papéis soltos</strong>
+                <p>Todas as informações das clientes salvas e organizadas</p>
+              </div>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <div>
+                <strong>Atendimento mais profissional</strong>
+                <p>Histórico completo à mão antes de cada procedimento</p>
+              </div>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <div>
+                <strong>Menos stress com agendamentos</strong>
+                <p>Agenda sincronizada e avisos para evitar conflitos</p>
+              </div>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <div>
+                <strong>Controle do seu dinheiro</strong>
+                <p>Saiba exatamente quanto você ganhou por mês e por cliente</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANOS -->
+    <section class="pricing section section-soft" id="planos">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Planos simples</span>
+          <h2>Comece grátis, evolua quando quiser</h2>
+          <p>
+            Escolha o plano ideal para o seu momento. Sem fidelidade, cancele a
+            qualquer momento direto na Play Store.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Free -->
+          <article class="plan-card">
+            <header class="plan-head">
+              <h3>Free</h3>
+              <p class="plan-price">
+                R$ 0,00
+                <span>/sempre</span>
+              </p>
+              <p class="plan-sub">Perfeito para começar</p>
+            </header>
+            <ul class="plan-list">
+              <li>Até <strong>20 clientes</strong> cadastradas</li>
+              <li>Agenda completa sem limites de horários</li>
+              <li>Cadastro, anamnese e fichas técnicas</li>
+              <li>Histórico de atendimentos</li>
+              <li>Gestão financeira básica</li>
+              <li>Exibe anúncios</li>
+            </ul>
+            <a
+              class="btn btn-outline btn-block"
+              href="https://play.google.com/store/apps/details?id=com.lmdev.lashagenda&hl=pt"
+              target="_blank"
+              rel="noopener"
+            >
+              Começar grátis
+            </a>
+          </article>
+
+          <!-- Pro (destaque) -->
+          <article class="plan-card plan-featured">
+            <div class="plan-ribbon">MAIS POPULAR</div>
+            <header class="plan-head">
+              <h3>Pro</h3>
+              <p class="plan-price">
+                <span class="small">a partir de</span><br />
+                R$ 39,90
+                <span>/mês</span>
+              </p>
+              <p class="plan-sub">Estúdio profissional · 7 dias grátis</p>
+            </header>
+            <ul class="plan-list">
+              <li><strong>Ilimitado</strong> — clientes e horários</li>
+              <li>Tudo do plano Premium</li>
+              <li><strong>Backup automático no Google Drive</strong></li>
+              <li>Envio de emails e templates</li>
+              <li>Galeria de fotos antes e depois por cliente</li>
+              <li>Suporte dedicado</li>
+            </ul>
+            <a
+              class="play-badge-link play-badge-block"
+              href="https://play.google.com/store/apps/details?id=com.lmdev.lashagenda&hl=pt"
+              target="_blank"
+              rel="noopener"
+              aria-label="Testar plano Pro por 7 dias na Google Play"
+            >
+              <img
+                class="play-badge play-badge-md"
+                src="assets/img/disponivel-google-play.png"
+                alt="Testar Pro por 7 dias — Disponível no Google Play"
+                width="220"
+                height="66"
+              />
+            </a>
+          </article>
+
+          <!-- Premium -->
+          <article class="plan-card">
+            <header class="plan-head">
+              <h3>Premium</h3>
+              <p class="plan-price">
+                <span class="small">a partir de</span><br />
+                R$ 19,90
+                <span>/mês</span>
+              </p>
+              <p class="plan-sub">Para estúdios em crescimento · 7 dias grátis</p>
+            </header>
+            <ul class="plan-list">
+              <li>Até <strong>40 clientes</strong> cadastradas</li>
+              <li>Tudo do plano Free</li>
+              <li><strong>SEM anúncios</strong></li>
+              <li>Personalize com a logo do seu estúdio</li>
+              <li>Suporte prioritário</li>
+              <li><strong>7 dias grátis para testar</strong></li>
+            </ul>
+            <a
+              class="btn btn-outline btn-block"
+              href="https://play.google.com/store/apps/details?id=com.lmdev.lashagenda&hl=pt"
+              target="_blank"
+              rel="noopener"
+            >
+              Testar Premium por 7 dias
+            </a>
+          </article>
+        </div>
+
+        <div class="pricing-table-wrap">
+          <p class="pricing-table-label">Comparativo completo dos planos</p>
+
+          <div class="pricing-table" role="table" aria-label="Comparativo de planos Free, Premium e Pro">
+            <div class="pricing-table-head pricing-table-row" role="row">
+              <div class="pricing-table-cell pricing-table-feature" role="columnheader">Funcionalidade</div>
+              <div class="pricing-table-cell" role="columnheader">
+                <span class="plan-mini plan-mini-free">Free</span>
+              </div>
+              <div class="pricing-table-cell" role="columnheader">
+                <span class="plan-mini plan-mini-premium">Premium</span>
+              </div>
+              <div class="pricing-table-cell pricing-table-featured" role="columnheader">
+                <span class="plan-mini plan-mini-pro">Pro</span>
+              </div>
+            </div>
+
+            <div class="pricing-table-row" role="row">
+              <div class="pricing-table-cell pricing-table-feature" role="cell">Limite de clientes</div>
+              <div class="pricing-table-cell" role="cell">Até 20</div>
+              <div class="pricing-table-cell" role="cell">Até 40</div>
+              <div class="pricing-table-cell pricing-table-featured" role="cell">Ilimitado</div>
+            </div>
+
+            <div class="pricing-table-row" role="row">
+              <div class="pricing-table-cell pricing-table-feature" role="cell">Agenda sem limites de horários</div>
+              <div class="pricing-table-cell pricing-check" role="cell">✓</div>
+              <div class="pricing-table-cell pricing-check" role="cell">✓</div>
+              <div class="pricing-table-cell pricing-table-featured pricing-check" role="cell">✓</div>
+            </div>
+
+            <div class="pricing-table-row" role="row">
+              <div class="pricing-table-cell pricing-table-feature" role="cell">Cadastro completo de clientes</div>
+              <div class="pricing-table-cell pricing-check" role="cell">✓</div>
+              <div class="pricing-table-cell pricing-check" role="cell">✓</div>
+              <div class="pricing-table-cell pricing-table-featured pricing-check" role="cell">✓</div>
+            </div>
+
+            <div class="pricing-table-row" role="row">
+              <div class="pricing-table-cell pricing-table-feature" role="cell">Anamnese digital</div>
+              <div class="pricing-table-cell pricing-check" role="cell">✓</div>
+              <div class="pricing-table-cell pricing-check" role="cell">✓</div>
+              <div class="pricing-table-cell pricing-table-featured pricing-check" role="cell">✓</div>
+            </div>
+
+            <div class="pricing-table-row" role="row">
+              <div class="pricing-table-cell pricing-table-feature" role="cell">Ficha técnica detalhada</div>
+              <div class="pricing-table-cell pricing-check" role="cell">✓</div>
+              <div class="pricing-table-cell pricing-check" role="cell">✓</div>
+              <div class="pricing-table-cell pricing-table-featured pricing-check" role="cell">✓</div>
+            </div>
+
+            <div class="pricing-table-row" role="row">
+              <div class="pricing-table-cell pricing-table-feature" role="cell">Histórico de atendimentos</div>
+              <div class="pricing-table-cell pricing-check" role="cell">✓</div>
+              <div class="pricing-table-cell pricing-check" role="cell">✓</div>
+              <div class="pricing-table-cell pricing-table-featured pricing-check" role="cell">✓</div>
+            </div>
+
+            <div class="pricing-table-row" role="row">
+              <div class="pricing-table-cell pricing-table-feature" role="cell">Gestão financeira e relatórios</div>
+              <div class="pricing-table-cell pricing-check" role="cell">Básico</div>
+              <div class="pricing-table-cell pricing-check" role="cell">✓</div>
+              <div class="pricing-table-cell pricing-table-featured pricing-check" role="cell">✓</div>
+            </div>
+
+            <div class="pricing-table-row" role="row">
+              <div class="pricing-table-cell pricing-table-feature" role="cell">Galeria de fotos antes e depois</div>
+              <div class="pricing-table-cell" role="cell">—</div>
+              <div class="pricing-table-cell" role="cell">—</div>
+              <div class="pricing-table-cell pricing-table-featured pricing-check" role="cell">✓</div>
+            </div>
+
+            <div class="pricing-table-row" role="row">
+              <div class="pricing-table-cell pricing-table-feature" role="cell">Envio de emails e templates</div>
+              <div class="pricing-table-cell" role="cell">—</div>
+              <div class="pricing-table-cell" role="cell">—</div>
+              <div class="pricing-table-cell pricing-table-featured pricing-check" role="cell">✓</div>
+            </div>
+
+            <div class="pricing-table-row" role="row">
+              <div class="pricing-table-cell pricing-table-feature" role="cell">Backup automático no Google Drive</div>
+              <div class="pricing-table-cell" role="cell">—</div>
+              <div class="pricing-table-cell" role="cell">—</div>
+              <div class="pricing-table-cell pricing-table-featured pricing-check" role="cell">✓</div>
+            </div>
+
+            <div class="pricing-table-row" role="row">
+              <div class="pricing-table-cell pricing-table-feature" role="cell">Personalização com logo do estúdio</div>
+              <div class="pricing-table-cell" role="cell">—</div>
+              <div class="pricing-table-cell pricing-check" role="cell">✓</div>
+              <div class="pricing-table-cell pricing-table-featured pricing-check" role="cell">✓</div>
+            </div>
+
+            <div class="pricing-table-row" role="row">
+              <div class="pricing-table-cell pricing-table-feature" role="cell">Sem anúncios</div>
+              <div class="pricing-table-cell" role="cell">Com anúncios</div>
+              <div class="pricing-table-cell pricing-check" role="cell">✓</div>
+              <div class="pricing-table-cell pricing-table-featured pricing-check" role="cell">✓</div>
+            </div>
+
+            <div class="pricing-table-row" role="row">
+              <div class="pricing-table-cell pricing-table-feature" role="cell">Suporte</div>
+              <div class="pricing-table-cell" role="cell">Padrão</div>
+              <div class="pricing-table-cell" role="cell">Prioritário</div>
+              <div class="pricing-table-cell pricing-table-featured" role="cell">Dedicado</div>
+            </div>
+
+            <div class="pricing-table-row" role="row">
+              <div class="pricing-table-cell pricing-table-feature" role="cell">Teste grátis de 7 dias</div>
+              <div class="pricing-table-cell" role="cell">—</div>
+              <div class="pricing-table-cell pricing-check" role="cell">✓</div>
+              <div class="pricing-table-cell pricing-table-featured pricing-check" role="cell">✓</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="container final-cta-inner">
+        <h2>Pronto para organizar seu estúdio de verdade?</h2>
+        <p>
+          Baixe o Lash Designer Pro agora e transforme a rotina do seu
+          atendimento. Comece grátis, evolua quando achar necessário.
+        </p>
+        <a
+          class="play-badge-link"
+          href="https://play.google.com/store/apps/details?id=com.lmdev.lashagenda&hl=pt"
+          target="_blank"
+          rel="noopener"
+          aria-label="Baixar Lash Designer Pro na Google Play"
+        >
+          <img
+            class="play-badge play-badge-xl"
+            src="assets/img/disponivel-google-play.png"
+            alt="Disponível no Google Play"
+            width="300"
+            height="90"
+          />
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Perguntas frequentes</span>
+          <h2>Dúvidas comuns</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>
+              <span>Preciso de cadastro para usar o app?</span>
+              <span class="faq-toggle">+</span>
+            </summary>
+            <p>
+              Não. Você baixa, abre e já pode começar a cadastrar suas clientes
+              e agendamentos gratuitamente. O login com Google é necessário
+              apenas para o backup em nuvem do plano Pro.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Os dados ficam salvos no celular ou na nuvem?</span>
+              <span class="faq-toggle">+</span>
+            </summary>
+            <p>
+              Por padrão tudo é salvo localmente no seu celular (SQLite). No
+              plano Pro você ativa o backup automático no Google Drive e pode
+              restaurar em outro dispositivo, mantendo sua base intacta.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Como funciona o teste de 7 dias do Pro?</span>
+              <span class="faq-toggle">+</span>
+            </summary>
+            <p>
+              Ao assinar o Pro pela Play Store, você ganha 7 dias de acesso
+              completo sem cobrança. Se não gostar, basta cancelar antes do fim
+              do período que nada é cobrado.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Posso cancelar quando quiser?</span>
+              <span class="faq-toggle">+</span>
+            </summary>
+            <p>
+              Claro! Sem fidelidade nenhuma. A assinatura é recorrente mensal e
+              você pode cancelar direto pela Play Store a qualquer momento,
+              mantendo o acesso até o fim do período pago.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>O app funciona em tablet?</span>
+              <span class="faq-toggle">+</span>
+            </summary>
+            <p>
+              Sim. Todas as telas são adaptáveis a celulares e tablets Android,
+              com layout responsivo para você usar onde preferir — inclusive no
+              estúdio, com a tela maior.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Como entro em contato se precisar de ajuda?</span>
+              <span class="faq-toggle">+</span>
+            </summary>
+            <p>
+              Dentro do app, menu Configurações, existe uma área de Suporte e
+              Contato. Lá você também encontra os nossos canais oficiais para
+              dúvidas rápidas por WhatsApp ou email.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand">
+          <img src="assets/img/logo.png" alt="Logo Lash Designer Pro" class="brand-logo" />
+          <div class="brand-text">
+            <span class="brand-title">Lash Designer</span>
+            <span class="brand-sub">PRO</span>
+          </div>
+        </a>
+        <p>
+          Gestão profissional para estúdios de Lash Designer. Feito com ❤️ por
+          Leandro Mendonça DEV.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Produto</h4>
+        <ul>
+          <li><a href="#funcionalidades">Funcionalidades</a></li>
+          <li><a href="#planos">Planos e preços</a></li>
+          <li><a href="#faq">Dúvidas comuns</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="#faq">Central de ajuda</a></li>
+          <li><a href="mailto:leandromen.dev@gmail.com">leandromen.dev@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="termos.html">Termos de uso</a></li>
+          <li><a href="privacidade.html">Política de privacidade</a></li>
+        </ul>
+        <a
+          class="play-badge-link footer-play-badge"
+          href="https://play.google.com/store/apps/details?id=com.lmdev.lashagenda&hl=pt"
+          target="_blank"
+          rel="noopener"
+          aria-label="Baixar Lash Designer Pro na Google Play"
+        >
+          <img
+            class="play-badge play-badge-md"
+            src="assets/img/disponivel-google-play.png"
+            alt="Disponível no Google Play"
+            width="190"
+            height="58"
+          />
+        </a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Lash Designer Pro · Leandro Mendonça DEV · Todos os direitos reservados.</p>
+      <p class="footer-disclaimer">
+        Google Play e o logótipo do Google Play são marcas da Google LLC.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

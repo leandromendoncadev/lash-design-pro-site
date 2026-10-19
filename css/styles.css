@@ -922,6 +922,59 @@ a {
   font-size: 0.9375rem;
 }
 
+.plan-annual-box {
+  display: grid;
+  gap: 4px;
+  margin: 0 0 14px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(236, 72, 153, 0.09), rgba(236, 72, 153, 0.02));
+  border: 1px solid rgba(236, 72, 153, 0.18);
+}
+
+.plan-annual-box-pro {
+  background: linear-gradient(180deg, rgba(236, 72, 153, 0.14), rgba(236, 72, 153, 0.04));
+  border-color: rgba(236, 72, 153, 0.26);
+  box-shadow: 0 12px 28px rgba(236, 72, 153, 0.12);
+}
+
+.plan-annual-kicker {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.plan-annual-price {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  font-family: var(--font-display);
+  font-size: 2.15rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1;
+}
+
+.plan-annual-price small {
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--subtext);
+}
+
+.plan-annual-note {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.plan-price-secondary {
+  margin-bottom: 6px;
+  opacity: 0.92;
+}
+
 .plan-list {
   list-style: none;
   display: flex;
@@ -1942,6 +1995,54 @@ a {
   font-weight: 600;
   color: var(--subtext);
   margin-left: 2px;
+}
+
+.plan-mobile-price-secondary {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.plan-mobile-annual {
+  display: grid;
+  gap: 3px;
+  margin: 8px 0 10px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(236, 72, 153, 0.1), rgba(236, 72, 153, 0.03));
+  border: 1px solid rgba(236, 72, 153, 0.18);
+}
+
+.plan-mobile-annual-pro {
+  background: linear-gradient(180deg, rgba(236, 72, 153, 0.14), rgba(236, 72, 153, 0.05));
+  border-color: rgba(236, 72, 153, 0.28);
+}
+
+.plan-mobile-annual-kicker {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.plan-mobile-annual strong {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--text);
+}
+
+.plan-mobile-annual strong small {
+  font-size: 0.8rem;
+  color: var(--subtext);
+}
+
+.plan-mobile-annual-note {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--text);
 }
 
 .plan-mobile-tag {

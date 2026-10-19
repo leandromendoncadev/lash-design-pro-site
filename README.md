@@ -145,7 +145,7 @@ https://SEU-USUARIO.github.io/lash-design-pro-site/
 | **Google Play Billing 8.0.0+** | Política menciona sistema de compras integrado à Play (exigência de 31/08/2026). |
 | **Google Drive (backup)** | Escopos de "App Data folder" e arquivos de backup documentados em privacidade.html. |
 | **Anúncios (Free)** | Menção a fins de publicidade/medição anônima no Free. |
-| **Planos / Teste 7 dias** | Free 20 clientes · Premium 40 (7 dias grátis) · Pro ∞ (7 dias grátis) — coerentes com o app Flutter. |
+| **Planos / Teste 7 dias** | Free 10 clientes · Premium 30 (7 dias grátis) · Pro ∞ (7 dias grátis) + anuais Premium/Pro — coerentes com o app Flutter. |
 | **HTTPS obrigatório** | GitHub Pages + Enforce HTTPS atende domínios com essa exigência. |
 
 ---
